@@ -13,7 +13,6 @@ from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 
 
-
 #custom functions
 from login import enter_email, enter_password
 from ring import ring
@@ -44,7 +43,6 @@ driver.get("https://www.google.com/android/find")
 time.sleep(1)
 enter_email(driver, email)
 time.sleep(5)
-print(driver.page_source)
 
 enter_password(driver, password)
 WebDriverWait(driver, timeout).until( EC.presence_of_element_located((By.ID, "device-infos")))
